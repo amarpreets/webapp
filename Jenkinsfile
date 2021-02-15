@@ -22,7 +22,7 @@ echo "M2_HOME = ${M2_HOME}"
 }
 
 stage ('Build'){
-steps{sh 'mvn clean pacakge'
+steps{sh 'mvn3 clean pacakge'
 }
 }
 
