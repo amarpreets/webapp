@@ -12,8 +12,7 @@ pipeline {
             ''' 
       }
     }
- 
-      }
+  }
     
     
     stage ('Build') {
@@ -22,3 +21,4 @@ pipeline {
        }
     }
  }
+}
