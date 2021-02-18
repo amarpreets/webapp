@@ -52,7 +52,7 @@ pipeline {
         sshagent(['tomcat']){
           sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@15.207.16.162:/home/ubuntu/prod/apache-tomcat-8.5.63/webapps/webapp.war'
          
-        }
+        
       }
     }
       
@@ -62,7 +62,7 @@ pipeline {
          sh 'ssh -o  StrictHostKeyChecking=no ubuntu@13.127.160.152 "docker run -t owasp/zap2docker-stable zap-baseline.py -t http://15.207.16.162:8080/webapp/" || true'
         }
       }
-    
+      }
  }
   
 }
